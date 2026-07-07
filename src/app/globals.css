@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+/* Self-hosted fonts (SIL Open Font License) */
+@font-face {
+  font-family: "Cinzel";
+  src: url("/fonts/Cinzel.ttf") format("truetype");
+  font-weight: 400 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "EB Garamond";
+  src: url("/fonts/EBGaramond.ttf") format("truetype");
+  font-weight: 400 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "EB Garamond";
+  font-style: italic;
+  src: url("/fonts/EBGaramond-Italic.ttf") format("truetype");
+  font-weight: 400 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("/fonts/IBMPlexMono-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("/fonts/IBMPlexMono-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@theme inline {
+  /* Storm Catalogue — palette sampled from The Hollow Library cover */
+  --color-ink: #111923;        /* storm ink-blue page background */
+  --color-panel: #18212C;      /* raised surfaces */
+  --color-panel-2: #1D2835;    /* hover / nested surfaces */
+  --color-line: #26313E;       /* hairline borders */
+  --color-paper: #EDF1F4;      /* primary text, sea mist */
+  --color-paper-dim: #A7B4C2;  /* secondary text */
+  --color-brass: #E3A84E;      /* window-light amber accent */
+  --color-brass-bright: #F0BC63;
+  --color-stamp: #C25E4B;      /* rubber-stamp red */
+
+  --font-display: "Cinzel", Georgia, serif;
+  --font-body: "EB Garamond", Georgia, serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-family: var(--font-body);
+}
+
+::selection { background: var(--color-brass); color: var(--color-ink); }
+
+:focus-visible {
+  outline: 2px solid var(--color-brass);
+  outline-offset: 2px;
+}
+
+/* ---- Display headings: engraved caps like the cover titling ---- */
+.font-display { letter-spacing: 0.05em; }
+
+/* ---- Placeholder covers (books without artwork yet): storm-blue bindings ---- */
+.cover { position: relative; }
+.cover::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(227, 168, 78, 0.4);
+  border-radius: 3px;
+  pointer-events: none;
+}
+.cover-1 { background: linear-gradient(150deg, #202b38, #111823); }
+.cover-2 { background: linear-gradient(150deg, #243141, #131c27); }
+.cover-3 { background: linear-gradient(150deg, #1d2c33, #101a20); }
+.cover-4 { background: linear-gradient(150deg, #272e3b, #161b26); }
+.cover-5 { background: linear-gradient(150deg, #222939, #121623); }
+.cover-6 { background: linear-gradient(150deg, #2b2c38, #191a24); }
+.cover-7 { background: linear-gradient(150deg, #1b2531, #0d131c); }
+
+/* ---- Real cover artwork ---- */
+.cover-photo {
+  border-radius: 4px;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.5);
+  display: block;
+}
+
+/* ---- Rubber stamp ---- */
+.stamp {
+  display: inline-block;
+  transform: rotate(-2deg);
+  border: 1.5px solid currentColor;
+  border-radius: 3px;
+  padding: 2px 8px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.92;
+}
+
+/* ---- Catalogue card rod-hole ---- */
+.card-hole {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 1px solid var(--color-line);
+  background: var(--color-ink);
+}
+
+.lift { transition: transform 0.25s ease, border-color 0.25s ease; }
+.lift:hover { transform: translateY(-3px); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+input, textarea, select { background: var(--color-ink); }
+input:focus, textarea:focus, select:focus { border-color: var(--color-brass) !important; outline: none; }
