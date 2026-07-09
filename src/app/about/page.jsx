@@ -4,11 +4,11 @@ import { themes } from "../../data/books";
 export const metadata = {
   title: "About",
   description:
-    "Clydie Cronjé — South African author of thirty manuscripts, bonsai gardener, builder, and early-morning writer.",
+    "Clydie Cronjé — South African author of thirty manuscripts, ex SAPS Police Officer, 35 year career in IT, weekend and holiday writer.",
 };
 
 const lifeNotes = [
-  { label: "Bonsai gardener", text: "Every corner of the garden holds a tree — each one a years-long practice in patience and intention." },
+  { label: "Grandfather, Father and Husband" ,text: "True family man loves his kids, wife and grandchildren very much." },
   { label: "IT career", text: "From programmer to IT Executive — all levels of technology across a decades-long career." },
   { label: "30 years of writing", text: "From MS Notebook to OneNote to Google Keep to Word — assembled into thirty complete manuscripts." },
   { label: "Daily meditation", text: "Christian foundation, spiritual practice — every morning begins with stillness alongside Debbie-Ann." },
@@ -63,7 +63,7 @@ export default function AboutPage() {
         <div className="text-[15px] text-paper-dim leading-[1.85] max-w-[680px] space-y-4">
           <p>
             Clydie Cronjé has spent his late fifties doing something quietly
-            remarkable: writing thirty books across genres that most authors
+            remarkable: finalising thirty books written across most of his life, across genres that most authors
             would never dare share a shelf. He writes literary fiction rooted in
             the red dust and mine-whistle rhythms of South Africa&apos;s West Rand.
             He writes YA supernatural mysteries set in boarding schools where the
@@ -73,11 +73,11 @@ export default function AboutPage() {
             consultant with something urgent to say to 2026.
           </p>
           <p>
-            He does not sit still between books. His garden is a living canvas of
-            bonsai — not collected in one place but threaded through every
-            corner, each tree a years-long conversation between patience and
+            He does not sit still between books. He is an IT Executive 
+            that has been working in IT since the early 90's
+            and is well versed in IT mamangement, Software Development 
             intention. He paints. He builds and repairs electronics with the same
-            careful attention he brings to a sentence. He loves technology not as
+            cand Project Management. He loves technology not as
             a tool but as a language, one he has been fluent in for decades and
             still finds surprising.
           </p>
@@ -94,8 +94,8 @@ export default function AboutPage() {
             has written.
           </p>
           <p>
-            He lives in South Africa with Debbie-Ann, surrounded by bonsai,
-            paint, circuitry, and stories. She has always been the best reason
+            He lives in South Africa with Debbie-Ann, surrounded by grandchildren,
+            painting, circuitry, and stories. She has always been the best reason
             to come home.
           </p>
         </div>
