@@ -13,7 +13,7 @@ export const metadata = {
   openGraph: {
     title: "Clydie Cronjé — Author of The Hollow Library",
     description:
-      "A boarding school library that holds more than books. Book one of seven, launching soon.",
+      "A boarding school library that holds more than books. Book one of seven, available now.",
     type: "website",
     images: ["/covers/hl1.jpg"],
   },
