@@ -22,7 +22,7 @@ export default function Newsletter() {
             Step into the library early
           </h2>
           <p className="text-[15px] text-paper-dim leading-relaxed">
-            Read chapter one of <em>The Hollow Library</em> before launch, and be first
+            Read chapter one of <em>The Hollow Library</em> and be first
             to hear when each book leaves the catalogue and reaches the shelf.
           </p>
         </div>
